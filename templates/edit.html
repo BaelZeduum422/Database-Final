@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Data</title>
+</head>
+<body>
+    <h1>Edit Data</h1>
+    <form action="/edit/{{ data[0] }}" method="post">
+        Area ID: <input type="text" name="new_area_id" value="{{ data[1] }}"><br><br>
+        Year: <input type="text" name="new_year" value="{{ data[2] }}"><br><br>
+        Season: <input type="text" name="new_season" value="{{ data[3] }}"><br><br>
+        Temperature: <input type="text" name="new_temperature" value="{{ data[4] }}"><br><br>
+        Predicted Temp: <input type="text" name="new_predicted_temp" value="{{ data[5] }}"><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

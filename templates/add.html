@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+</head>
+
+<body>
+    <h1>Add Data</h1>
+    <form action="/add" method="POST">
+        <label for="year">Year:</label><br>
+        <input type="text" id="year" name="year"><br>
+        <label for="season">Season:</label><br>
+        <select id="season" name="season">
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Fall">Fall</option>
+            <option value="Winter">Winter</option>
+        </select><br>
+        <label for="temperature">Temperature:</label><br>
+        <input type="text" id="temperature" name="temperature"><br>
+        <label for="predicted_temp">Predicted Temperature:</label><br>
+        <input type="text" id="predicted_temp" name="predicted_temp"><br>
+        <label for="area_id">Area ID:</label><br>
+        <input type="text" id="area_id" name="area_id"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

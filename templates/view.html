@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Data</title>
+</head>
+<body>
+    <h1>Yearly Seasonal Temperatures</h1>
+    <table border="1">
+        <tr>
+            <th>YearlyTemp_ID</th>
+            <th>Area_ID</th>
+            <th>Year</th>
+            <th>Season</th>
+            <th>Temperature</th>
+            <th>Predicted_Temp</th>
+        </tr>
+        {% for data in yearly_season_temps %}
+        <tr>
+            <td>{{ data[0] }}</td>
+            <td>{{ data[1] }}</td>
+            <td>{{ data[2] }}</td>
+            <td>{{ data[3] }}</td>
+            <td>{{ data[4] }}</td>
+            <td>{{ data[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Areas</h1>
+    <table border="1">
+        <tr>
+            <th>Area_ID</th>
+            <th>Area_Name</th>
+        </tr>
+        {% for area in areas %}
+        <tr>
+            <td>{{ area[0] }}</td>
+            <td>{{ area[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('index') }}"><button>Back to Index</button></a>
+</body>
+</html>

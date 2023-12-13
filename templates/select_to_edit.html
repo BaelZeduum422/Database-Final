@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Data to Edit</title>
+</head>
+<body>
+    <h1>Select Data to Edit</h1>
+
+    <!-- Form to select specific data for editing -->
+    <form action="/select_to_edit" method="post">
+        <label for="yearlyTempID">Enter YearlyTemp ID:</label>
+        <input type="text" id="yearlyTempID" name="yearlyTempID">
+        <input type="submit" value="Select">
+    </form>
+
+    <hr>
+
+    <!-- Display the full table -->
+    <table border="1">
+        <tr>
+            <th>YearlyTemp_ID</th>
+            <th>Area_ID</th>
+            <th>Year</th>
+            <th>Season</th>
+            <th>Temperature</th>
+            <th>Predicted_Temp</th>
+        </tr>
+        {% for data in yearly_season_temps %}
+        <tr>
+            <td>{{ data[0] }}</td>
+            <td>{{ data[1] }}</td>
+            <td>{{ data[2] }}</td>
+            <td>{{ data[3] }}</td>
+            <td>{{ data[4] }}</td>
+            <td>{{ data[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
